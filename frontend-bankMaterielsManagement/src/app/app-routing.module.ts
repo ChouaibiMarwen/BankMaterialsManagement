@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginUerComponent } from './login-uer/login-uer.component';
 
 const routes: Routes = [
+  {path:'', component: LoginUerComponent},
  { path:'loginUser', component: LoginUerComponent},
  {path: 'home' , component: HomeComponent}
 ];
