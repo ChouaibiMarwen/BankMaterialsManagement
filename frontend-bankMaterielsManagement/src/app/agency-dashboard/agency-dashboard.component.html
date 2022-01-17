@@ -1,14 +1,16 @@
+
 <div class="container">
 
     <!--Collapse button-->
-    <p>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#add" aria-expanded="false" aria-controls="collapseExample">
+    <div class="buttons">
+        <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#add" aria-expanded="false" aria-controls="collapseExample">
            Ajouter Agence
         </button>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#display" aria-expanded="false" aria-controls="collapseExample">
+        
+        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#display" aria-expanded="false" aria-controls="collapseExample">
             Afficher Agence
          </button>
-    </p>
+    </div>
 
     <!--Add agency div-->
     <div class="collapse" id="add">
@@ -37,8 +39,9 @@
     <!--display agency div-->
     <div class="collapse" id="display">
 
+        <span class="title">Nos Agences </span>
         <!--agencies tables-->
-        <table class="table">
+        <table class="table mt-4">
             <thead>
                 <tr>
                     <th scope="col">#</th>
