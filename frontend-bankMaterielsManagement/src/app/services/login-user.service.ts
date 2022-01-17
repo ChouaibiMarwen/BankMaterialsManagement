@@ -14,4 +14,8 @@ export class LoginUserService {
     return this._http.post<any>("http://localhost:8080/loginUser",admin) 
   }
 
+  public registerAdmin(user: Admin):Observable<any>{
+    return this._http.post<any>("http://localhost:8080/registerAdmin", user);
+  }
+
 }

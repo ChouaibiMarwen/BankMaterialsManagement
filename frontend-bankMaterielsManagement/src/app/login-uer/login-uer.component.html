@@ -1,7 +1,19 @@
 <div class="container-fluid home">
     <div class="main">
         <!--Sign up form-->
-
+        <input type="checkbox" name="" id="chk" aria-hidden="true">
+        <div class="singup">
+            <form #registerAdmin= "ngForm" (ngSubmit)= "registerUser()">
+                <label class="signuplabel"for="chk" aria-hidden="true">Sign Up</label>
+                <input type="text" name="name" id="firstName" [(ngModel)]="user.firstName" placeholder="Name" required>
+                <input type="text" name="secondName" id="lastName" [(ngModel)]="user.lastName" placeholder="Second name" required>
+                <input type="email" name="email" id="email" [(ngModel)]="user.email" placeholder="Email" required>
+                <input type="text" name="username" id="userName" [(ngModel)]="user.userName" placeholder="User Name" required>
+                <input type="password" name="password"  id="password" [(ngModel)]="user.password" placeholder="Password" required>
+                <input type="password" name="checkpassword" placeholder="Retype password" required>
+                <button type="submit">Sing up</button>
+             </form>
+        </div>
     
         <!--Login form-->
         <div class="login">

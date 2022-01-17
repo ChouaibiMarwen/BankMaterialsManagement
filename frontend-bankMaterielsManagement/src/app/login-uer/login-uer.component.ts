@@ -11,6 +11,7 @@ import { LoginUserService } from '../services/login-user.service';
 export class LoginUerComponent implements OnInit {
 
   admin = new Admin();
+  user = new Admin();
 
   constructor(private service : LoginUserService, private router : Router) { }
 
@@ -28,5 +29,17 @@ export class LoginUerComponent implements OnInit {
       }
     )
  
+  }
+
+  registerUser(){
+    this.service.registerAdmin(this.user).subscribe(
+      data=>{
+        console.log("register avec succé");
+        this.router.navigate(['/loginUser']);
+      },
+      err=>{
+        console.log("exception register");
+      }
+    )
   }
 }
