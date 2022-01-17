@@ -5,7 +5,7 @@ import { Admin } from '../classes/admin';
 
 @Injectable({
   providedIn: 'root'
-})
+})  
 export class LoginUserService {
 
   constructor(private _http : HttpClient) { }

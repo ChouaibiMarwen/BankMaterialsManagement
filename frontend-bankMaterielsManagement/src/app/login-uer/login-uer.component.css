@@ -98,10 +98,13 @@ button:hover{
 .login .signuplabel{
     margin-top: 30px;
 }
-
-#chk:checked ~ .login{
-	transform: translateY(-480px);
+#chk ~ .login{
+    transform: translateY(-480px);
 }
+#chk:checked ~ .login{
+    transform: translateY(-50px);
+}
+
 #chk:checked ~ .login label{
 	transform: scale(1);	
 }
