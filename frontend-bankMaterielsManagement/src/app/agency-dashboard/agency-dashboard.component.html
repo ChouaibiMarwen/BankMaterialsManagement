@@ -1,31 +1,56 @@
 <div class="container">
 
     <!--Collapse button-->
-    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Ajouter Agence
-    </button>
+    <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#add" aria-expanded="false" aria-controls="collapseExample">
+           Ajouter Agence
+        </button>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#display" aria-expanded="false" aria-controls="collapseExample">
+            Afficher Agence
+         </button>
+    </p>
 
-    <div class="collapse btn-primary" id="collapseExample">
+    <!--Add agency div-->
+    <div class="collapse" id="add">
 
         <!--Add agency form-->
 
         <form>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label for="agencyName">Nom du l'agence :</label>
                 <input type="text" class="form-control" id="agencyName" placeholder="Nom">
             </div>        
 
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label for="agencyAddress">Address du l'agence :</label>
                 <input type="text" class="form-control" id="agencyAddress" placeholder="Address">
             </div>
 
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <button class="btn btn-primary" type="button">Ajouter</button>
             </div>
 
         </form>
 
+    </div>
+
+    <!--display agency div-->
+    <div class="collapse" id="display">
+
+        <!--agencies tables-->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Modifier</th>
+                    <th scope="col">Supprimer</th>
+                    <th scope="col">Plus</th>
+                </tr>
+
+            </thead>
+        </table>        
     </div>
 
 </div>
