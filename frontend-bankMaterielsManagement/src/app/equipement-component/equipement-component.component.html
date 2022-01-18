@@ -2,44 +2,11 @@
 
 <!-- Add Equipment to the stock -->
 <div class="container">
-    <div class="row">
 
-        <!--Display equipment / add equipment to agency-->
-        <div class="col-lg-6">
-
-            <div class="row equipmentList">
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Ref</th>
-                        <th scope="col">type</th>
-                        <th scope="col">Modifier</th>
-                      </tr>
-                        
-                    </thead>
-                </table>
-            </div>
-
-            <div class="row">
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Ref</th>
-                        <th scope="col">type</th>
-                        <th scope="col">Modifier</th>
-                      </tr>
-                        
-                    </thead>
-                </table>
-            </div>
-        </div>
-
+    <div class="row">          
         <!--Add equipment-->
-        <div class="col-lg-6 cards-list">
-            <div class="row" id="cardRow">
-                <!--Souris-->
+        <div class="col-lg-3 cards-list">
+             <!--Souris-->
                 <div class="card" style="width: 14rem">
                     <img class="card-img-top" src="../../assets/souris.jpg" alt="">
                     <div class="card-body">
@@ -47,10 +14,13 @@
                         <p class="card-text">
                             <span class="ref">Soruis etc etc</span>
                         </p>
-                        <button class="btn">Ajouter</button> 
+                        <button class="btn btn-primary">Ajouter</button> 
+                        <button class="btn btn-danger">Supprimer</button>
                     </div>
                 </div>
-                    <!-- Scanner -->
+        </div>
+        <div class="col-lg-3">    
+            <!-- Scanner -->
                 <div class="card" style="width: 14rem">
                     <img class="card-img-top" src="../../assets/scanner.png" alt="">
                     <div class="card-body">
@@ -58,12 +28,12 @@
                         <p class="card-text">
                             <span class="ref">Scanner etc etc</span>
                         </p>
-                        <button class="btn">Ajouter</button> 
+                        <button class="btn btn-primary">Ajouter</button> 
+                        <button class="btn btn-danger">Supprimer</button> 
                     </div>
                 </div>
-            </div>
-            
-            <div class="row" id="cardRow">
+        </div>
+        <div class="col-lg-3">   
                 <!-- Clavier-->
                 <div class="card" style="width: 14rem">
                     <img class="card-img-top" src="../../assets/clavier.jfif" alt="">
@@ -72,10 +42,12 @@
                         <p class="card-text">
                             <span class="ref">Clavier etc etc</span>
                         </p>
-                        <button class="btn">Ajouter</button> 
+                        <button class="btn btn-primary">Ajouter</button> 
+                        <button class="btn btn-danger">Supprimer</button>
                     </div>
                 </div>
-
+        </div> 
+        <div class="col-lg-3">       
                 <!--Imprimante-->
                 <div class="card" style="width: 14rem">
                     <img class="card-img-top" src="../../assets/imprimante.jpg" alt="">
@@ -84,11 +56,25 @@
                         <p class="card-text">
                             <span class="ref">Imprimante etc etc</span>
                         </p>
-                        <button class="btn">Ajouter</button> 
+                        <button class="btn btn-primary">Ajouter</button> 
+                        <button class="btn btn-danger">Supprimer</button> 
                     </div>
                 </div>
-            </div>
-         
         </div>
+         
+        
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Ref</th>
+                <th scope="col">type</th>
+                <th scope="col">Modifier</th>
+              </tr>
+                
+            </thead>
+        </table>  
     </div>
 </div>
