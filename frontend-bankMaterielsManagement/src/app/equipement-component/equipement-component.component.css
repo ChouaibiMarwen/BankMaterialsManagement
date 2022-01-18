@@ -3,6 +3,11 @@
     margin-top: 10%;
 }
 
+.addEquipment {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
 .cards-list .row {
     align-items: center;
     justify-content: center;
