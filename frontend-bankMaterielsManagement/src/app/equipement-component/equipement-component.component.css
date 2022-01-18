@@ -3,7 +3,23 @@
     margin-top: 10%;
 }
 
-.row {
+.cards-list .row {
     align-items: center;
     justify-content: center;
+}
+
+.card-img-top {
+    width: 180px;
+    height: 180px;
+}
+
+#cardRow {
+    justify-content: space-between;
+    margin-left: 25%;
+    margin-bottom: 05%;
+}
+
+.equipmentList{
+    display: block;
+    height: 40%;
 }

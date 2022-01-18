@@ -7,11 +7,38 @@
         <!--Display equipment / add equipment to agency-->
         <div class="col-lg-6">
 
+            <div class="row equipmentList">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Ref</th>
+                        <th scope="col">type</th>
+                        <th scope="col">Modifier</th>
+                      </tr>
+                        
+                    </thead>
+                </table>
+            </div>
+
+            <div class="row">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Ref</th>
+                        <th scope="col">type</th>
+                        <th scope="col">Modifier</th>
+                      </tr>
+                        
+                    </thead>
+                </table>
+            </div>
         </div>
 
         <!--Add equipment-->
-        <div class="col-lg-6">
-            <div class="row">
+        <div class="col-lg-6 cards-list">
+            <div class="row" id="cardRow">
                 <!--Souris-->
                 <div class="card" style="width: 14rem">
                     <img class="card-img-top" src="../../assets/souris.jpg" alt="">
@@ -36,7 +63,7 @@
                 </div>
             </div>
             
-            <div class="row">
+            <div class="row" id="cardRow">
                 <!-- Clavier-->
                 <div class="card" style="width: 14rem">
                     <img class="card-img-top" src="../../assets/clavier.jfif" alt="">
