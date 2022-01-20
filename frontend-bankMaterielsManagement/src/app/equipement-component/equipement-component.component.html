@@ -82,4 +82,42 @@
             </thead>
         </table>  
     </div>
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Ajouter Equipement
+                    </h5>
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <!--Add equipment form-->
+                    <form action="">
+                            <label for="typeEquipment">Type Equipement</label>
+                            <select name="typeEquipment" id="typeEquipment">
+                                <option value="impimante">imprimante</option>
+                                <option value="uniteCentrale">uniteCentrale</option>
+                                <option value="clavier">uniteCentrale</option>
+                                <option value="scanner">uniteCentrale</option>
+                            </select>
+
+                            <label for="quantite">Quantité</label>
+                            <input type="number" step="1" name="quantite" id="quantite">
+
+                            <label for="date">Date</label>
+                            <input type="text" name="date" id="date">
+
+                            <input type="submit"> 
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Ajouter</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
