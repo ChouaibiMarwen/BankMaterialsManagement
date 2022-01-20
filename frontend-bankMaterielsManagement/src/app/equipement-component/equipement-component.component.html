@@ -61,7 +61,7 @@
                             <!--Add Quantity here-->
                             <span class="ref">Quantité :</span>
                         </p>
-                        <button class="btn btn-primary btn-success" id="addBtn">Ajouter</button> 
+                        <button type="button" class="btn btn-success" id="addBtn" data-toggle="modal" data-target="#addModal">Ajouter</button> 
                         
                     </div>
                 </div>
@@ -83,11 +83,12 @@
         </table>  
     </div>
 
-    <div class="modal" tabindex="-1" role="dialog">
+
+    <div class="modal fade in" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalform">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">
+                    <h5 class="modal-title" >
                         Ajouter Equipement
                     </h5>
                     
