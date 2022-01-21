@@ -16,7 +16,7 @@
                             <!--Add Quantity here-->
                             <span class="ref">Quantité : </span>
                         </p>
-                        <button class="btn btn-success" id="addBtn">Ajouter</button> 
+                        <button class="btn btn-success" id="addBtn" (click)="open(addEquipment )">Ajouter</button> 
                      
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                             <!--Add Quantity here-->
                             <span class="ref">Quantité :</span>
                         </p>
-                        <button class="btn btn-primary btn-success" id="addBtn">Ajouter</button> 
+                        <button class="btn btn-primary btn-success" id="addBtn" (click)="open(addEquipment )">Ajouter</button> 
                         
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                             <!--Add Quantity here-->
                             <span class="ref">Quantité :</span>
                         </p>
-                        <button class="btn btn-primary btn-success" id="addBtn">Ajouter</button> 
+                        <button class="btn btn-primary btn-success" id="addBtn" (click)="open(addEquipment )">Ajouter</button> 
                         
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                             <!--Add Quantity here-->
                             <span class="ref">Quantité :</span>
                         </p>
-                        <button type="button" class="btn btn-success" id="addBtn" data-toggle="modal" data-target="#addModal">Ajouter</button> 
+                        <button type="button" class="btn btn-success" id="addBtn" data-toggle="modal"  (click)="open(addEquipment )">Ajouter</button> 
                         
                     </div>
                 </div>
@@ -84,41 +84,57 @@
     </div>
 
 
-    <div class="modal fade in" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalform">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" >
-                        Ajouter Equipement
-                    </h5>
-                    
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer"></button>
-                </div>
-                <div class="modal-body">
-                    <!--Add equipment form-->
-                    <form action="">
-                            <label for="typeEquipment">Type Equipement</label>
-                            <select name="typeEquipment" id="typeEquipment">
-                                <option value="impimante">imprimante</option>
-                                <option value="uniteCentrale">uniteCentrale</option>
-                                <option value="clavier">uniteCentrale</option>
-                                <option value="scanner">uniteCentrale</option>
-                            </select>
 
-                            <label for="quantite">Quantité</label>
-                            <input type="number" step="1" name="quantite" id="quantite">
 
-                            <label for="date">Date</label>
-                            <input type="text" name="date" id="date">
-
-                            <input type="submit"> 
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Ajouter</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
-                </div>
-            </div>
+    <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">New KPI</h4>
+          <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-    </div>
+        <div class="modal-body">
+            <div>
+                <input type="text"  class="formKpi" placeholder="The new's Kpi name" name="kpiname"  ><br>
+                <button type="button " class="addBtn3"  data-dismiss="content"><i class="material-icons" >group_add</i>Add</button>
+        </div>
+        </div>
+       
+      </ng-template>
+    
+    
+      <ng-template #addEquipment let-c="close" let-d="dismiss">
+        
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title"></h4>
+          <button type="button" class="close btn btn-danger" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+            <!--Equipment type-->
+            <label for="equipmentType">Type d'equipement </label>
+            <select class="form-select" name="equipmentType" id="equipmentType">
+                <option value="uniteCentrale">Unité centrale</option>
+                <option value="scanner">Scanner</option>
+                <option value="Imprimante">Imprimante</option>
+                <option value="clavier">Clavier</option>
+            </select>
+
+            <!--Equipment quantity-->
+            <label for="quantity">Qunatité </label>
+            <input type="number" class="form-control" name="quantity" value="1">
+
+            <!--Equipment date-->
+            <label for="equipmentDate">Date d'ajout </label>
+            <input class="form-control" type="date" name="equipmentDate" id="equipmentDate">
+
+            <button class="btn btn-success" type="submit">Ajout</button>
+            <button class="btn btn-danger" type="button" (click)="d('Cross click')">Fermer</button>
+        </div>
+       
+      </ng-template>
+
+
 </div>
