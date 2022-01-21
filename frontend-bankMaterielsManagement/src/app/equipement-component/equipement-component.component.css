@@ -10,6 +10,13 @@
     justify-content: space-between;
     
 }
+
+
+.form-group .btn{
+    float: right;
+    margin-left: 5px;
+}
+
 .addEquipment .card-img-top{
     width: 100px;
     height: 100px;
