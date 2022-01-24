@@ -70,13 +70,18 @@
         
     </div>
     <div class="row">
+
+        <span class="title">Stock d'equipements informatique</span>
+
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Ref</th>
-                <th scope="col">type</th>
+                <th scope="col">NI</th>
+                <th scope="col">Type</th>
+                <th scope="col">Réference</th>
+                <th scope="col">Date</th>
                 <th scope="col">Modifier</th>
+                
               </tr>
                 
             </thead>
@@ -110,6 +115,10 @@
                 </select>
             </div>
 
+            <!--Réference-->
+            <label class="mb-2" for="ref">Réference</label>
+            <input type="text" class="form-control" name="reference" id="ref">
+
             <!--Equipment quantity-->
             <div class="form-group mt-2 mb-2">
                 <label class="mb-2" for="quantity">Qunatité </label>
@@ -123,8 +132,9 @@
             </div>
 
             <div class="form-group mt-4 mb-2">
+                <button class="btn btn-success" type="submit">Ajouter</button>
                 <button class="btn btn-secondary" type="reset">Annuler</button>
-                <button class="btn btn-success" type="submit">Ajout</button>
+                
                 
             </div>
         </form>
