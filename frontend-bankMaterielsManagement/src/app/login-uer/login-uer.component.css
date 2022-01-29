@@ -99,7 +99,7 @@ button:hover{
     margin-top: 30px;
 }
 #chk ~ .login{
-    transform: translateY(-480px);
+    transform: translateY(-380px);
 }
 #chk:checked ~ .login{
     transform: translateY(-50px);
