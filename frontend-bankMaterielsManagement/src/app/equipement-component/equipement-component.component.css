@@ -1,0 +1,55 @@
+
+.container{
+    margin-top: 10%;
+}
+
+.addEquipment {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.form-group .btn{
+    float: right;
+    margin-left: 5px;
+}
+
+.addEquipment .card-img-top{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.addEquipment #addBtn{
+    display: inline;
+    align-items: center;
+}
+.cards-list .row {
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-top {
+    width: 180px;
+    height: 180px;
+}
+
+#cardRow {
+    justify-content: space-between;
+    margin-left: 25%;
+    margin-bottom: 05%;
+}
+
+.equipmentList{
+    display: block;
+    height: 40%;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-top: 3%;
+    color: darkgray;
+}

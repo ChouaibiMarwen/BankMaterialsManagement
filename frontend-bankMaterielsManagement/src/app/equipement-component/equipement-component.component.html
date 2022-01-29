@@ -1,0 +1,145 @@
+<app-header></app-header>
+
+<!-- Add Equipment to the stock -->
+<div class="container">
+
+    <div class="row addEquipment">          
+        <!--Add equipment-->
+        <div class="col-lg-3 cards-list">
+             <!--Souris-->
+                <div class="card" style="width: 14rem">
+                    <img class="card-img-top mx-auto pt-2" src="../../assets/unitecentrale.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Unité centrale</h5>
+                        <p class="card-text">
+
+                            <!--Add Quantity here-->
+                            <span class="ref">Quantité : </span>
+                        </p>
+                        <button class="btn btn-success" id="addBtn" (click)="open(addEquipment )">Ajouter</button> 
+                     
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-3">    
+            <!-- Scanner -->
+                <div class="card" style="width: 14rem">
+                    <img class="card-img-top mx-auto pt-2" src="../../assets/scanner.png" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Scanner</h5>
+                        <p class="card-text">
+                            <!--Add Quantity here-->
+                            <span class="ref">Quantité :</span>
+                        </p>
+                        <button class="btn btn-primary btn-success" id="addBtn" (click)="open(addEquipment )">Ajouter</button> 
+                        
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-3">   
+                <!-- Clavier-->
+                <div class="card" style="width: 14rem">
+                    <img class="card-img-top mx-auto pt-2" src="../../assets/clavier.jfif" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Clavier</h5>
+                        <p class="card-text">
+                            <!--Add Quantity here-->
+                            <span class="ref">Quantité :</span>
+                        </p>
+                        <button class="btn btn-primary btn-success" id="addBtn" (click)="open(addEquipment )">Ajouter</button> 
+                        
+                    </div>
+                </div>
+        </div> 
+        <div class="col-lg-3">       
+                <!--Imprimante-->
+                <div class="card" style="width: 14rem">
+                    <img class="card-img-top mx-auto pt-2" src="../../assets/imprimante.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Imprimante</h5>
+                        <p class="card-text">
+                            <!--Add Quantity here-->
+                            <span class="ref">Quantité :</span>
+                        </p>
+                        <button type="button" class="btn btn-success" id="addBtn" data-toggle="modal"  (click)="open(addEquipment )">Ajouter</button> 
+                        
+                    </div>
+                </div>
+        </div>
+         
+        
+    </div>
+    <div class="row">
+
+        <span class="title">Stock d'equipements informatique</span>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">NI</th>
+                <th scope="col">Type</th>
+                <th scope="col">Réference</th>
+                <th scope="col">Date</th>
+                <th scope="col">Modifier</th>
+                
+              </tr>
+                
+            </thead>
+        </table>  
+    </div>
+
+
+
+
+
+    
+    
+      <ng-template #addEquipment let-c="close" let-d="dismiss">
+        
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Ajout d'equipment informatique</h4>
+          <button type="button" class="close btn btn-danger" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <form action="">
+            <!--Equipment type-->
+            <div class="form-group">
+                <label class="mb-2" for="equipmentType">Type d'equipement </label>
+                <select class="form-select" name="equipmentType" id="equipmentType">
+                    <option value="uniteCentrale">Unité centrale</option>
+                    <option value="scanner">Scanner</option>
+                    <option value="Imprimante">Imprimante</option>
+                    <option value="clavier">Clavier</option>
+                </select>
+            </div>
+
+            <!--Réference-->
+            <label class="mb-2" for="ref">Réference</label>
+            <input type="text" class="form-control" name="reference" id="ref">
+
+            <!--Equipment quantity-->
+            <div class="form-group mt-2 mb-2">
+                <label class="mb-2" for="quantity">Qunatité </label>
+                <input type="number" class="form-control" name="quantity" value="1">
+            </div>
+
+            <!--Equipment date-->
+            <div class="form-group mt-2 mb-2">
+                <label class="mb-2" for="equipmentDate">Date d'ajout </label>
+                <input class="form-control" type="date" name="equipmentDate" id="equipmentDate">
+            </div>
+
+            <div class="form-group mt-4 mb-2">
+                <button class="btn btn-success" type="submit">Ajouter</button>      
+                <button class="btn btn-secondary" type="reset">Annuler</button>
+
+            </div>
+        </form>
+        </div>
+       
+      </ng-template>
+
+
+</div>

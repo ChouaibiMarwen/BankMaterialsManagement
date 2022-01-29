@@ -1,0 +1,12 @@
+.AddEmployeeForm {
+    margin-top: 7%;
+}
+.AddEmployeeForm .btn {
+    float: right;
+    margin-left: 5px;
+    
+}
+.AddEmployeeForm .buttons{
+    float: left;
+    align-items: left;
+}
