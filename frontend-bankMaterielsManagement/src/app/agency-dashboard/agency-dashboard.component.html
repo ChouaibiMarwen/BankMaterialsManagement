@@ -49,16 +49,27 @@
         <!--agencies tables-->
         <table class="table mt-4">
             <thead>
-                <tr>
-                    <th scope="col">#</th>
+                <tr >
+                    <th scope="col">id_Agence</th>
                     <th scope="col">Nom</th>
                     <th scope="col">Address</th>
-                    <th scope="col">Modifier</th>
-                    <th scope="col">Supprimer</th>
-                    <th scope="col">Plus</th>
+                    <th scope="col">Telephone</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    
                 </tr>
-
             </thead>
+            <tbody >
+                <tr *ngFor= "let agence of Agences">
+                    <td>{{agence.idA}}</td>
+                    <td>{{agence.name}}</td>
+                    <td>{{agence.adress}}</td>
+                    <td>{{agence.telephone}}</td>
+                    <td><button class="btn btn-warning"  >Modifier</button></td>
+                    <td><button  class="btn btn-danger" (click)=" deleteAgece(agence.idA)" >Supprimer</button></td>
+
+                </tr>
+        </tbody>
         </table>        
     </div>
 

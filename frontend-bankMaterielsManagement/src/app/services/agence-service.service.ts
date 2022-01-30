@@ -14,4 +14,12 @@ export class AgenceServiceService {
   public createAgence(agence : Agence):Observable<any>{
     return this._http.post<any>("http://localhost:8080/ajoutAgence", agence) 
   }
+
+  public getSubAdmins ():Observable<Agence[]>{
+    return this._http.get<Agence[]>("http://localhost:8080/listAgence")
+  }
+
+  public DeleteKpi(idA : number){
+    return this._http.delete("http://localhost:8080/deleteAgence?idA="+ idA)
+  }
 }
