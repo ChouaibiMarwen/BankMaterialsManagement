@@ -18,24 +18,24 @@
 
         <!--Add agency form-->
 
-        <form>
+        <form #AddAgence = "ngForm" (ngSubmit)="createAgence()">
             <div class="form-group mt-2">
                 <label for="agencyName">Nom du l'agence :</label>
-                <input type="text" class="form-control" id="agencyName" placeholder="Nom">
+                <input type="text" class="form-control" name="name"  [(ngModel)]="agence.name" placeholder="Nom">
             </div>        
 
             <div class="form-group mt-2">
                 <label for="agencyAddress">Address du l'agence :</label>
-                <input type="text" class="form-control" id="agencyAddress" placeholder="Address">
+                <input type="text" class="form-control" name="adress" [(ngModel)]="agence.adress" placeholder="Address">
             </div>
             
             <div class="form-group mt-2">
                 <label for="phoneNumber">Numéro telephonique :</label>
-                <input type="text" class="form-control" id="phoneNumber" placeholder="Numéro telephonique">
+                <input type="text" class="form-control" name="telephone" [(ngModel)]="agence.telephone" placeholder="Numéro telephonique">
             </div>
 
             <div class="form-group mt-2">
-                <button class="btn btn-primary" type="button">Ajouter</button>
+                <button class="btn btn-primary" type="submit">Ajouter</button>
             </div>
 
         </form>

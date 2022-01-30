@@ -9,13 +9,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto me-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Agences</a>
+              <a class="nav-link" [routerLink]="['/agencies']">Agences</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Equipement</a>
+              <a class="nav-link" [routerLink]="['/equipement']">Equipement</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"> Employés</a>
+              <a class="nav-link" [routerLink]="['/employees']"> Employés</a>
             </li>
            
           </ul>
@@ -23,7 +23,7 @@
           
            <ul class="navbar-nav deconn">
                <li class="nav-link">
-                <a class="nav-link me-2" href="#">Deconnexion</a>
+                <a class="nav-link me-2" [routerLink]="['/']">Deconnexion</a>
                </li>
            </ul>
           
