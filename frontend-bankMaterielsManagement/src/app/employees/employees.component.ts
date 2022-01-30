@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Agence } from '../classes/agence';
+import { AgenceServiceService } from '../services/agence-service.service';
 
 @Component({
   selector: 'app-employees',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesComponent implements OnInit {
 
-  constructor() { }
+  Agences !: Agence[];
+
+
+  constructor(private service : AgenceServiceService) { 
+    this.getAgencesList();
+  }
 
   ngOnInit(): void {
   }
+
+  getAgencesList(){
+    this.service.getSubAdmins().subscribe(
+      (resp) => {
+        console.log(resp);
+        this.Agences = resp;
+       
+      },
+      (err) =>{
+        console.log(err);
+      }
+    );
+
+  }
+
 
 }
