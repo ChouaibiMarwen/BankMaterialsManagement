@@ -28,6 +28,7 @@ export class AgencyDashboardComponent implements OnInit {
       (resp)=>{
         console.log("agence creer avec succé");
         this.handleClear();
+        this.getAgencesList();
       },
        (err) =>{
         console.log("erreur lors de la creation de l'agence");

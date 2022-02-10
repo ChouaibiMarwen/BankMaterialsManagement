@@ -16,51 +16,61 @@
             <form>
                 <div class="form-group">
                     <label class="mb-2" for="employeeName">Nom </label>
-                    <input class="form-control mb-2" type="text" name="firstName" id="employeeName" placeholder="Votre nom">
+                    <input class="form-control mb-2" type="text" name="firstName"  [(ngModel)]="empl.firstName" id="employeeName" placeholder=" nom">
 
                 </div>
                 <div class="form-group">
                     <label class="mb-2" for="employeeSecondName">Prenom </label>
-                    <input class="form-control mb-2" type="text" name="secondName" id="employeeSecondName" placeholder="Votre prénom">
+                    <input class="form-control mb-2" type="text" name="lastName" [(ngModel)]="empl.lastName" id="employeeSecondName" placeholder=" prénom">
+                </div>
+                <div class="form-group">
+                    <label class="mb-2" for="employeeSecondName">Poste </label>
+                    <input class="form-control mb-2" type="text" name="poste" [(ngModel)]="empl.post" id="employeeSecondName" placeholder="poste">
                 </div>
                 <div class="form-group">
                     <label class="mb-2" for="agence">Agence </label>
-                    <select class="form-control mb-2" id="agence">
-                        <option value="">Agence 1</option>
-                        <option value="">Agence 2</option>
-                        <option value="">Agence 3</option>
+                    <select class="form-control mb-2" id="agence" name="agenceName"  [(ngModel)]="empl.agenceName">
+                        <option  *ngFor="let agence of Agences" [value]="agence.name">
+                            {{agence.name}}
+                        </option>
+
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="mb-2" for="scanner">Scanner </label>
-                    <select class="form-control mb-2" id="scanner">
-                        <option value="">Scanner 1</option>
-                        <option value="">Scanner 2</option>
+                    <select class="form-control mb-2" id="scanner" name="idScan" [(ngModel)]="empl.idScan">
+                        <option  *ngFor="let scanner of Scanners" [value]="scanner.numInv">
+                           num.Inv :  {{scanner.numInv}}
+                        </option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="mb-2"  for="imprimante">Imprimante </label>
-                    <select class="form-control mb-2" id="Imprimante">
-                        <option value="">Imprimante 1</option>
-                        <option value="">Imprimante 2</option>
+                    <select class="form-control mb-2" id="Imprimante" name="idImpr" [(ngModel)]="empl.idImpr">
+                        <option  *ngFor="let impr of Impres" [value]="impr.numInv">
+                            num.Inv :  {{impr.numInv}}
+                         </option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="mb-2" for="clavier">Clavier </label>
-                    <select class="form-control mb-2" id="clavier">
-                        <option value="">clavier 1</option>
-                        <option value="">clavier 2</option>
+                    <select class="form-control mb-2" id="clavier" name="idClavier" [(ngModel)]="empl.idClavier">
+                        <option  *ngFor="let clavier of Claviers" [value]="clavier.numInv">
+                            num.Inv :  {{clavier.numInv}}
+                         </option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="mb-2" for="uniteCentrale">Unité centrale </label>
-                    <select class="form-control mb-2" id="uniteCentrale">
-                        <option value="">uniteCentrale 1</option>
-                        <option value="">uniteCentrale 2</option>
+                    <select class="form-control mb-2" id="uniteCentrale" name="idUnite" [(ngModel)]="empl.idUnite">
+                        <option  *ngFor="let uc of UnitesC" [value]="uc.numInv">
+                            num.Inv :  {{uc.numInv}}
+                         </option>
                     </select>
+                    
                 </div>
                 <!--Buttons-->
-                <button type="submit" class="btn btn-success mt-2 mb-2">Ajouter</button>
+                <button type="submit" class="btn btn-success mt-2 mb-2" (click)="creaateEmpl()">Ajouter</button>
                 <button type="reset" class="btn btn-secondary mt-2 mb-2">Annuler</button>
                
             </form>
@@ -74,7 +84,7 @@
         <table class="table mt-4">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Id_Empl</th>
                     <th scope="col">Nom</th>
                     <th scope="col">Prenom</th>
                     <th scope="col">Agence</th>
@@ -85,6 +95,22 @@
                 </tr>
 
             </thead>
+            <tbody >
+                <tr *ngFor= "let emplo of Empls">
+                    <td>{{emplo.idEmp}}</td>
+                    <td>{{emplo.firstName}}</td>
+                    <td>{{emplo.lastName}}</td>
+                    <td>{{emplo.post}}</td>
+                    <td>{{emplo.agenceName}}</td>
+                    <td>{{emplo.idClavier}}</td>
+                    <td>{{emplo.idScan}}</td>
+                    <td>{{emplo.idImpr}}</td>
+                    <td>{{emplo.idUnite}}</td>
+                    <td><button class="btn btn-warning"  >Modifier</button></td>
+                    <td><button  class="btn btn-danger" (click)="deletEmp(emplo.idEmp)">Supprimer</button></td>
+
+                </tr>
+             </tbody>
         </table>        
         </div>
     </div>

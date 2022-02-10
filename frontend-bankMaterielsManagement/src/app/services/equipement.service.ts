@@ -22,4 +22,15 @@ export class EquipementService {
     return this.http.get("http://localhost:8080/nombreEqui?name="+ name)
   }
 
+
+  public DeleteEquip(ideq : number){
+    return this.http.delete("http://localhost:8080/suppEquip?ideq="+ ideq)
+  }
+
+
+  public fetchEquiList (name: String):Observable<Equipement[]>{
+    return this.http.get<Equipement[]>("http://localhost:8080/findEquiByName?name="+ name)
+  }
+
+ 
 }

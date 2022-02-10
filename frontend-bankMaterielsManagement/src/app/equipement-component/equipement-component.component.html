@@ -94,7 +94,7 @@
                     <td>{{equi.dateAjout}}</td>
                     <td>{{equi.used}}</td>
                     <td><button class="btn btn-warning"  >Modifier</button></td>
-                    <td><button  class="btn btn-danger"  >Supprimer</button></td>
+                    <td><button  class="btn btn-danger" (click)="deleteEqui(equi.numInv)" >Supprimer</button></td>
 
                 </tr>
         </tbody>
@@ -146,13 +146,15 @@
 
             <div class="form-group mt-4 mb-2">
                 <button class="btn btn-success" type="submit" (click)="addEqui()">Ajouter</button>      
-                <button class="btn btn-secondary" type="reset">Annuler</button>
+                <button class="btn btn-secondary" type="reset" (click)=" handleClear()">Annuler</button>
 
             </div>
         </form>
         </div>
        
       </ng-template>
+
+      
 
 
 </div>

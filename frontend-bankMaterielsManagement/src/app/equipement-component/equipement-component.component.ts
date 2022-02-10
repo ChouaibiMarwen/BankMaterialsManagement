@@ -4,6 +4,7 @@ import { ViewChild } from '@angular/core';
 import { Equipement } from '../classes/equipement';
 import { NgForm } from '@angular/forms';
 import { EquipementService } from '../services/equipement.service';
+import { Router } from '@angular/router';
 
 
 
@@ -30,7 +31,7 @@ export class EquipementComponentComponent implements OnInit {
      this.d.getMinutes(),
      this.d.getSeconds()].join(':');
 
-  constructor(config: NgbModalConfig, private modalService: NgbModal, private service : EquipementService) {
+  constructor(config: NgbModalConfig, private modalService: NgbModal, private service : EquipementService, private router : Router ) {
     config.backdrop = 'static';
     config.keyboard = false;
     this.getAgencesList();
@@ -60,9 +61,19 @@ export class EquipementComponentComponent implements OnInit {
           console.log("erreur lors de la creation de l'equipement");
         }
         )
-      
+        
+        this.refresh();
     }
     
+  }
+  refresh():void{
+    window.location.reload();
+  }
+  
+  handleClear(){
+    this.equi.numInv = 0; 
+    this.equi.type = ' ';
+    this.nombre= 0;
   }
 
   getAgencesList(){
@@ -114,7 +125,7 @@ export class EquipementComponentComponent implements OnInit {
     })
   }
   getnumbreUniteC(){
-    this.service.equiNombre("unite centrale").subscribe( (resp) => {
+    this.service.equiNombre("uniteCentrale").subscribe( (resp) => {
       console.log(resp);
       this.nombreUniteCen= resp;
      
@@ -122,5 +133,23 @@ export class EquipementComponentComponent implements OnInit {
     (err) =>{
       console.log(err);
     })
+  }
+
+
+  deleteEqui(idEqu : number){
+    this.service.DeleteEquip(idEqu).subscribe(
+      (resp) => {
+        console.log("equipement supprimer avec succé");
+        this.getAgencesList();
+        this.getnumbreClavier();
+        this.getnumbreImpre();
+        this.getnumbreUniteC();
+        this.getnumbreScanner();
+       
+      },
+      (err) =>{
+        console.log(err);
+      }
+    )
   }
 }
